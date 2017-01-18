@@ -1,4 +1,27 @@
 # psmasawscmdlineinterfaceoper
+##7. Complex Operations: Rotate and Expire AMI Backups
+###2 Demo: Rotate and Expire AMI
+create instance ami
+```
+#!/bin/bash
+
+REGION=$1
+AMI=$2
+today=`/bin/date +%Y%m%d%H%M`
+
+/usr/local/bin/aws --region $REGION ec2 create-image --instance-id $AMI --name $AMI\_$today
+```
+
+
+
+
+
+
+
+
+
+
+
 ##8. Scripting Tasks: Alternatives to Shell Scripts
 ###2 Demo: Using Lambda for SSH
 select a lambda blueprint->lambda-canary  
