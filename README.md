@@ -92,3 +92,12 @@ def worker_handler(event, context):
         'message' : "Script execution completed. See Cloudwatch logs for complete output" + host
     }
 ```
+packaing script
+```
+cd ~/build/lib/python2.7/site-packages/
+zip -r ~/worker_function.zip *
+cd ../../../lib64/python2.7/site-packages/
+zip -r ~/worker_function.zip *
+cd ~
+zip worker_function.zip worker_function.py
+```
