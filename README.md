@@ -21,7 +21,21 @@ def trigger_handler(event,context):
   client = boto3.client('lambda')
   logger.error("Getting ready")
   for host in hostList:
+    logger.error(host)
+    invokeResponse =client.invoke(functionName='',InvocationType='Event',LogType='Tail',
     
+```
+
+script
+```
+sudo pip install virtualenv
+mkdir ~/build
+virtualenv /home/ec2-user/build
+cd build
+source ./bin/activate
+sudo yum install gcc openssl-devel python-devel libffi-devel
+pip install pycrypto
+pip install paramiko
 ```
 
 
